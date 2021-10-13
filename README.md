@@ -1,12 +1,12 @@
 # A K3S template on Gitpod
 
-This is a [k3s](https://k3s.io//) template configured for ephemeral Kubernetes development environments on [Gitpod](https://www.gitpod.io/).
+This is a kubernetes client env to be used with [Gitpod](https://www.gitpod.io/).
 
 ## Next Steps
 
 Click the button below to start a new development environment:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-k3s)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://github.com/paolocarta/gitpod-template-k8s.git)
 
 ## Get Started With Your Own Project
 
@@ -23,5 +23,3 @@ To get started with k3s on Gitpod, copy the `.gitpod.yml` and the `.gitpod` fold
 
 When you open your workspace terminal, the `kubectl` is already configured for you
 via the `~/.kube/config` file.
-
-### Kubectl from my local terminal
