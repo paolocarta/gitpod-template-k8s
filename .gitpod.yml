@@ -1,0 +1,10 @@
+image: gitpod/workspace-full
+checkoutLocation: gitpod-k8s
+tasks:
+  - name: dev environment
+    init: |
+      sudo apt update -y
+      sudo curl -o /usr/bin/kubectl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+      sudo chmod +x /usr/bin/kubectl
+    # command: |
+    #   .gitpod/qemu.sh
