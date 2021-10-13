@@ -6,7 +6,8 @@ This is a kubernetes client env to be used with [Gitpod](https://www.gitpod.io/)
 
 Click the button below to start a new development environment:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](gitpod.io/#https://github.com/paolocarta/gitpod-template-k8s.git)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/paolocarta/gitpod-template-k8s.git)
+
 
 ## Get Started With Your Own Project
 
