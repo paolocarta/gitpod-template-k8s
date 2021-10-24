@@ -6,7 +6,7 @@ RUN sudo apt-get update -y
 
 # Kubectl
 RUN sudo curl -o /usr/bin/kubectl -LO https://dl.k8s.io/release/v1.22.0/bin/linux/amd64/kubectl
-RUN sudo chmod +x /usr/bin/kubectlion
+RUN sudo chmod +x /usr/bin/kubectl
 
 # Kubectl autocomplete    
 RUN echo "source <(kubectl completion bash)" >> ~/.bashrc
