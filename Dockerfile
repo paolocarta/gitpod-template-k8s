@@ -6,8 +6,12 @@ RUN sudo apt-get update -y
 
 # Kubectl
 RUN sudo curl -o /usr/bin/kubectl -LO https://dl.k8s.io/release/v1.22.0/bin/linux/amd64/kubectl
-RUN sudo chmod +x /usr/bin/kubectl      
+RUN sudo chmod +x /usr/bin/kubectlion
+
+# Kubectl autocomplete    
 RUN echo "source <(kubectl completion bash)" >> ~/.bashrc
+RUN echo "alias k=kubectl" >> ~/.bashrc
+RUN echo "complete -F __start_kubectl k" >> ~/.bashrc
 
 # Helm
 RUN APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 && curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
@@ -16,9 +20,6 @@ RUN DEBIAN_FRONTEND=noninteractive && sudo apt-get install apt-transport-https -
 RUN echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 RUN sudo apt-get update
 RUN DEBIAN_FRONTEND=noninteractive && sudo apt-get install helm
-
-RUN alias k=kubectl
-# RUN complete -F __start_kubectl k
 
 RUN mkdir /home/gitpod/.kube
 COPY config /home/gitpod/.kube
