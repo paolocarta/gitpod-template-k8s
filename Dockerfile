@@ -22,5 +22,5 @@ RUN sudo apt-get update
 RUN DEBIAN_FRONTEND=noninteractive && sudo apt-get install helm
 
 RUN mkdir /home/gitpod/.kube
-COPY config /home/gitpod/.kube
-RUN sudo chown gitpod /home/gitpod/.kube/config
+COPY ws-user.kubeconfig /home/gitpod/.kube
+RUN sudo chown gitpod /home/gitpod/.kube/ws-user.kubeconfig
