@@ -5,7 +5,7 @@ FROM gitpod/workspace-base@sha256:0048b2636ab97828a1ead9e566740504a436d146176102
 RUN sudo apt-get update -y
 
 # Kubectl
-RUN sudo curl -o /usr/bin/kubectl -LO https://dl.k8s.io/release/v1.22.0/bin/linux/amd64/kubectl
+RUN sudo curl -o /usr/bin/kubectl -LO https://dl.k8s.io/release/v1.24.0/bin/linux/amd64/kubectl
 RUN sudo chmod +x /usr/bin/kubectl
 
 # Kubectl autocomplete    
@@ -22,5 +22,5 @@ RUN sudo apt-get update
 RUN DEBIAN_FRONTEND=noninteractive && sudo apt-get install helm
 
 RUN mkdir /home/gitpod/.kube
-COPY ws-user.kubeconfig /home/gitpod/.kube
-RUN sudo chown gitpod /home/gitpod/.kube/ws-user.kubeconfig
+COPY ws-user.kubeconfig /home/gitpod/.kube/config
+RUN sudo chown gitpod /home/gitpod/.kube/config
