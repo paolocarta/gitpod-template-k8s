@@ -21,6 +21,10 @@ RUN echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc
 RUN sudo apt-get update
 RUN DEBIAN_FRONTEND=noninteractive && sudo apt-get install helm
 
+RUN sudo git clone https://github.com/ahmetb/kubectx /usr/local/kubectx
+RUN sudo ln -s /usr/local/kubectx/kubectx /usr/local/bin/kubectx
+RUN sudo ln -s /usr/local/kubectx/kubens /usr/local/bin/kubens
+
 RUN mkdir /home/gitpod/.kube
 COPY ws-user.kubeconfig /home/gitpod/.kube/config
 RUN sudo chown gitpod /home/gitpod/.kube/config
