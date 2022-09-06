@@ -26,5 +26,6 @@ RUN sudo ln -s /usr/local/kubectx/kubectx /usr/local/bin/kubectx
 RUN sudo ln -s /usr/local/kubectx/kubens /usr/local/bin/kubens
 
 RUN mkdir /home/gitpod/.kube
-COPY ws-user.kubeconfig /home/gitpod/.kube/config
+COPY ./config /home/gitpod/.kube/config
 RUN sudo chown gitpod /home/gitpod/.kube/config
+RUN ls -l
