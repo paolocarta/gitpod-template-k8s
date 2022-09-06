@@ -8,6 +8,7 @@ tasks:
       alias k=kubectl
       complete -F __start_kubectl k
       mkdir workshop
+      clear
 
     # command: |
     #   .my-script.sh
